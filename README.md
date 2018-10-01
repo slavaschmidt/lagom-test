@@ -13,16 +13,29 @@ The setup is as following:
 - The process works with locally defined flow
 - The process does not work if the same flow used as a service - the results are never coming back
 
-Two approaches, local and remote are located in ManagerServiceImpl, lines 51 and 52;
-changing the behaviour can be done in line 44
+Two approaches, local and remote can be found in ManagerServiceImpl, lines 51 and 52;
+
+https://github.com/slavaschmidt/lagom-test/blob/master/manager-impl/src/main/scala/concept/ManagerServiceImpl.scala#L51
+https://github.com/slavaschmidt/lagom-test/blob/master/manager-impl/src/main/scala/concept/ManagerServiceImpl.scala#L52
+
+
+Changing the behaviour can be done in line 44
+
+https://github.com/slavaschmidt/lagom-test/blob/master/manager-impl/src/main/scala/concept/ManagerServiceImpl.scala#L44
+
+
 
 Output with executor flow:
 
+
 21:14:21.777 [info] Manager [] - Processing : 10
+
 21:14:35.874 [info] Executor [] - Executing: Source(SourceShape(Map.out(2100995652)))
 
 Output with local flow:
 
+
 21:13:07.306 [info] Manager [] - Processing : 10
+
 21:13:20.912 [info] Manager [] - Got batch of jobs done, now there are 10 available
 
